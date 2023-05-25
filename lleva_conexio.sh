@@ -1,1 +1,1 @@
-iptables -A OUTPUT -p tcp -m owner --uid-owner examen -j DROP
+iptables-restore regles_iptables.txt
