@@ -6,7 +6,7 @@ groupadd docker
 useradd -s /bin/bash -m examen
 echo examen:examen | chpasswd
 gpasswd -a examen docker
-cp ~/llanca_examen_bd/lleva_conexio.sh /etc/init.d/
+cp /home/Administrador/llanca_examen_bd/lleva_conexio.sh /etc/init.d/
 git clone https://github.com/sciscar/bd_examen.git 
 cd bd_examen 
 docker-compose up -d
@@ -19,4 +19,4 @@ cp
 
 chmod +x /etc/init.d/lleva_conexio.sh
 update-rc.d lleva_conexio.sh defaults 80
-./~/llanca_examen_bd/lleva_conexio.sh
+./home/Administrador/llanca_examen_bd/lleva_conexio.sh
