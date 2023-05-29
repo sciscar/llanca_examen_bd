@@ -19,4 +19,4 @@ cp
 
 chmod +x /etc/init.d/lleva_conexio.sh
 update-rc.d lleva_conexio.sh defaults 80
-./home/Administrador/llanca_examen_bd/lleva_conexio.sh
+/home/Administrador/llanca_examen_bd/lleva_conexio.sh
