@@ -6,7 +6,7 @@ groupadd docker
 useradd -s /bin/bash -m examen
 echo examen:examen | chpasswd
 gpasswd -a examen docker
-cp /home/Administrador/llanca_examen_bd/lleva_conexio.sh /etc/systemd/system/
+cp /home/Administrador/llanca_examen_bd/lleva_conexio.service /etc/systemd/system/
 chmod 664 /etc/systemd/system/lleva_conexio.service 
 systemctl daemon-reload
 systemctl enable lleva_conexio.service 
