@@ -6,7 +6,11 @@ groupadd docker
 useradd -s /bin/bash -m examen
 echo examen:examen | chpasswd
 gpasswd -a examen docker
-cp /home/Administrador/llanca_examen_bd/lleva_conexio.sh /etc/init.d/
+cp /home/Administrador/llanca_examen_bd/lleva_conexio.sh /etc/systemd/system/
+chmod 664 /etc/systemd/system/lleva_conexio.service 
+systemctl daemon-reload
+systemctl enable lleva_conexio.service 
+systemctl start lleva_conexio.service 
 git clone https://github.com/sciscar/bd_examen.git 
 cd bd_examen 
 docker-compose up -d
@@ -17,6 +21,6 @@ cp
 #sh -c 'echo " pre-up iptables -A OUTPUT -p tcp -m owner --uid-owner examen -j DROP" >> /etc/network/interfaces'
 #iptables -A OUTPUT -p tcp -m owner --uid-owner examen -j DROP
 
-chmod +x /etc/init.d/lleva_conexio.sh
-update-rc.d lleva_conexio.sh defaults 80
-/home/Administrador/llanca_examen_bd/lleva_conexio.sh
+#chmod +x /etc/init.d/lleva_conexio.sh
+#update-rc.d lleva_conexio.sh defaults 80
+#/home/Administrador/llanca_examen_bd/lleva_conexio.sh
