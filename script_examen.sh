@@ -11,7 +11,7 @@ gpasswd -a examen docker
 #systemctl daemon-reload
 #systemctl enable lleva_conexio.service 
 #systemctl start lleva_conexio.service 
-echo "*/2 *   * * *   root    /bin/sh /home/Administrador/llanca_examen_bd/lleva_conexio.sh" >> /etc/crontab
+echo "*/1 *   * * *   root    /bin/sh /home/Administrador/llanca_examen_bd/lleva_conexio.sh" >> /etc/crontab
 /etc/init.d/cron restart
 git clone https://github.com/scis
 git clone https://github.com/sciscar/bd_examen.git 
