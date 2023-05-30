@@ -6,7 +6,6 @@ iptables -A OUTPUT -o wlan0 -p udp  --dport 53 -m state --state NEW -j ACCEPT
 iptables -A OUTPUT -o wlan0 -p tcp  --dport 53 -m state --state NEW -j ACCEPT
 iptables -A OUTPUT -p tcp -d portal.edu.gva.es --dport 443 -j ACCEPT
 iptables -A OUTPUT -p tcp -d fonts.googleapis.com --dport 443 -j ACCEPT
-iptables -A OUTPUT -p tcp -d www.googletagmanager --dport 443 -j ACCEPT
 iptables -A OUTPUT -p tcp -d www.googletagmanager.com --dport 443 -j ACCEPT
 iptables -A OUTPUT -p tcp -d www.google-analytics.com --dport 443 -j ACCEPT
 iptables -A OUTPUT -p tcp -d cdnjs.cloudflare.com --dport 443 -j ACCEPT
