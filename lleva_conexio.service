@@ -1,0 +1,10 @@
+[Unit]
+After=network.target
+
+[Service]
+User=root
+ExecStart=/home/Administrador/llanca_examen_bd/lleva_conexio.sh
+
+[Install]
+WantedBy=default.target
+
