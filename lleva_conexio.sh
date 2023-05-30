@@ -1,5 +1,7 @@
 #!/bin/bash
 #iptables-restore /home/Administrador/llanca_examen_bd/regles_iptables.txt
+iptables -X
+iptables -F
 iptables -A OUTPUT -p tcp -d aules.edu.gva.es --dport 443 -j ACCEPT
 iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
 iptables -A OUTPUT -o wlan0 -p udp  --dport 53 -m state --state NEW -j ACCEPT
