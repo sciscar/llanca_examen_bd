@@ -11,7 +11,6 @@ iptables -A OUTPUT -p tcp -d www.googletagmanager.com --dport 443 -j ACCEPT
 iptables -A OUTPUT -p tcp -d www.google-analytics.com --dport 443 -j ACCEPT
 iptables -A OUTPUT -p tcp -d cdnjs.cloudflare.com --dport 443 -j ACCEPT
 iptables -A OUTPUT -p tcp -d fonts.gstatic.com --dport 443 -j ACCEPT
-iptables -A OUTPUT -p tcp -d gva.es 443 -j ACCEPT
 iptables -A OUTPUT -p tcp -d gva.es --dport 443 -j ACCEPT
 iptables -A OUTPUT -p tcp -d cdn.jsdelivr.net --dport 443 -j ACCEPT
 iptables -A OUTPUT -o wlan0  -p tcp -m owner --uid-owner examen -j DROP
